@@ -1,18 +1,15 @@
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
-from ads import views
-from ads.views import AdsView, AdView, CategoryView, CategoriesView
+from ads.views.index import index
 from board_ads import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index),
-    path('cat/', CategoriesView.as_view()),
-    path('ad/', AdsView.as_view()),
-    path('cat/<int:pk>', CategoryView.as_view()),
-    path('ad/<int:pk>', AdView.as_view()),
+    path('', index),
+    path('ad/', include('ads.urls.ad')),
+    path('cat/', include('ads.urls.category'))
 ]
 
 if settings.DEBUG:
