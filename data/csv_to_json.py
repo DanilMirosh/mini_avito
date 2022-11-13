@@ -5,9 +5,18 @@ csv_file_ads = 'ads.csv'
 json_file_ads = '../ads/fixtures/ads.json'
 ads_model = 'ads.ad'
 
-csv_file_catetories = 'categories.csv'
+csv_file_categories = 'categories.csv'
 json_file_categories = '../ads/fixtures/categories.json'
 categories_model = 'ads.category'
+
+csv_file_location = 'location.csv'
+json_file_locations = '../ads/fixtures/locations.json'
+locations_model = 'ads.location'
+
+csv_file_user = 'user.csv'
+json_file_users = '../ads/fixtures/users.json'
+users_model = 'users.user'
+
 
 
 # Functions
@@ -46,4 +55,6 @@ def replace_values(value):
 
 if __name__ == '__main__':
     print(csv_to_json(csv_file_ads, json_file_ads, ads_model))
-    print(csv_to_json(csv_file_catetories, json_file_categories, categories_model))
+    print(csv_to_json(csv_file_categories, json_file_categories, categories_model))
+    print(csv_to_json(csv_file_location, json_file_locations, locations_model))
+    print(csv_to_json(csv_file_user, json_file_users, users_model))
