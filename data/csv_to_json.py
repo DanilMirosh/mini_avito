@@ -1,6 +1,5 @@
 import csv, json
 
-
 # Params
 csv_file_ads = 'ads.csv'
 json_file_ads = '../ads/fixtures/ads.json'
