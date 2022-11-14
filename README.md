@@ -1,5 +1,6 @@
 ## Django, Postgres, Модели с relations и QuerySet
  1. Запустить контейнер postgresql
+ 
  docker run --name avito -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres  
  2. migrate database
  3. load fixtures
