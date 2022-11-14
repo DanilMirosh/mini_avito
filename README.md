@@ -1,4 +1,13 @@
 ## Django, Postgres, Модели с relations и QuerySet
+ 1. Запустить контейнер postgresql - docker run --name avito -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres  
+ 2. migrate database
+ 3. load fixtures
+ - ./manage.py loaddata locations.json'
+ - ./manage.py loaddata users.json'
+ - ./manage.py loaddata categories.json'
+ - ./manage.py loaddata ads.json'`
+
+
 
 # Шаг 1
 
@@ -24,7 +33,8 @@
 - для  `/cat/:id` — методы PATCH/DELETE,
 - для `/ad/:id` — методы PATCH/DELETE.
 
-```json
+```
+json
 Request
 PATCH /cat/1/update/
 
@@ -90,7 +100,8 @@ Response
 
 Должно получиться вот так:
 
-```json
+```
+json
 Request
 POST /ad/1/upload_image/
 ContentType 'multipart/form-data'
@@ -117,7 +128,8 @@ Response
 
 Добавьте пагинацию в отображение списков объявлений. У вас должно получиться следующее: 
 
-```json
+```
+json
 Request
 GET /ad/
 
@@ -150,7 +162,8 @@ Response
 
 NOTE: подумайте, так ли сильно связаны пользователи с объявлениями? или они могут жить отдельно?
 
-```json
+```
+json
 Request
 GET /user/
 
